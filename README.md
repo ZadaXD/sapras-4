@@ -7,102 +7,108 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-📦 Sistem Informasi SAPRAS AMIK Taruna
-Sistem berbasis web untuk mendukung proses pengawasan, pengendalian, dan pengalihan barang sarana dan prasarana (SAPRAS) di AMIK Taruna. Dibangun menggunakan Laravel 10 dan template dashboard STISLA.
+# 📦 Sistem Informasi SAPRAS AMIK Taruna
 
-🎯 Fitur Utama
-🔐 Login Multi-role (Calon Pengguna, Kabag, Wadir II, PJ Lab)
+Sistem informasi ini digunakan untuk **pengawasan**, **pengendalian**, dan **pengalihan** SAPRAS (Sarana dan Prasarana) oleh berbagai role di lingkungan AMIK Taruna. Dibangun dengan Laravel 10 dan menggunakan template dashboard **STISLA**.
 
-📊 Dashboard Role-Based (statistik & akses khusus)
+---
 
-🗂️ Master Data SAPRAS (CRUD oleh Kabag)
+## 🔧 Fitur Utama
 
-📨 Pengajuan Mutasi oleh Calon Pengguna
+- Manajemen SAPRAS (CRUD) oleh Kabag
+- Pengajuan mutasi SAPRAS oleh Calon Pengguna
+- Verifikasi pengajuan oleh Wadir II
+- Cetak Formulir Mutasi & Berita Acara
+- Pengawasan SAPRAS per LabKom (1–4)
+- Update kondisi barang oleh Penanggung Jawab Lab
+- Informasi umum SAPRAS
+- Dashboard dinamis sesuai **role**
+- Login & autentikasi Laravel bawaan
+- Responsive layout dengan STISLA + Bootstrap 4
+- Tabel interaktif dengan **DataTables**
 
-✅ Verifikasi Pengajuan oleh Wadir II
+---
 
-🖨️ Cetak Formulir & Berita Acara
+## 👥 Role & Hak Akses
 
-📍 Pengawasan SAPRAS per Lokasi (LabKom1–4) oleh PJ Lab & Calon Pengguna (read-only)
+| Role                  | Akses                                                                 |
+|-----------------------|----------------------------------------------------------------------|
+| Calon Pengguna        | Pengajuan mutasi, cetak formulir, lihat SAPRAS & pengawasan          |
+| Wadir II              | Verifikasi pengajuan (Setujui/Tolak)                                 |
+| Kabag                 | Kelola pengguna, data SAPRAS, buat dan cetak berita acara            |
+| Penanggung Jawab Lab  | Lihat SAPRAS berdasarkan lokasi LabKom, update kondisi barang        |
 
-🛠️ Update Kondisi Barang oleh PJ Lab (Baik / Rusak / Diperbaiki)
+---
 
-👥 Role & Hak Akses
-Role	Akses
-Calon Pengguna	Buat & cetak pengajuan, lihat SAPRAS dan pengawasan
-Wadir II	Verifikasi pengajuan (disetujui / ditolak)
-Kabag	Kelola user, data SAPRAS, dan buat berita acara
-Penanggung Jawab Lab	Cek SAPRAS per LabKom & update kondisi
+## ⚙️ Teknologi
 
-🚀 Teknologi
-Laravel 10.x
+- Laravel 10.x
+- STISLA Admin Template
+- Bootstrap 4.6
+- Font Awesome 5
+- jQuery & DataTables
+- MySQL / MariaDB
 
-Template AdminLTE3
+---
 
-Bootstrap 4
+## 🚀 Instalasi Lokal
 
-jQuery, DataTables
-
-Blade Templating
-
-MySQL/MariaDB
-
-⚙️ Instalasi
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/yourusername/sapras-amik.git
 cd sapras-amik
 
-# Install dependensi
+# Install dependencies
 composer install
 npm install && npm run dev
 
-# Copy file env & generate key
+# Setup file .env
 cp .env.example .env
 php artisan key:generate
 
-# Atur koneksi DB lalu migrasi & seed
+# Konfigurasi database lalu jalankan migrasi
 php artisan migrate --seed
 
-# Jalankan server lokal
+# Jalankan aplikasi
 php artisan serve
-🧪 Login Dummy (Seeder)
+```
+## 🧪 Login Dummy (Seeder)
 Role	Email	Password
 Kabag	kabag@amik.test	password
 Wadir II	wadir@amik.test	password
 Calon Pengguna	calon@amik.test	password
 Penanggung Jawab Lab	pjlab@amik.test	password
 
-📁 Struktur Fitur
+## 📁 Struktur Direktori
+bash
 Copy
 Edit
 app/
-├── Http/
-│   ├── Controllers/
-│   │   ├── PengajuanController.php
-│   │   ├── VerifikasiController.php
-│   │   ├── SaprasController.php
-│   │   └── ...
-├── Models/
-│   ├── Pengajuan.php
-│   ├── Sapras.php
-│   └── User.php
-resources/
-├── views/
-│   ├── dashboard/
-│   ├── pengajuan/
-│   ├── sapras/
+├── Http/Controllers/
+│   ├── SaprasController.php
+│   ├── PengajuanController.php
+│   ├── VerifikasiController.php
+│   ├── DashboardController.php
 │   └── ...
+resources/views/
+├── sapras/
+├── pengajuan/
+├── users/
+└── layouts/
 routes/
 └── web.php
-📃 Lisensi
-MIT License © 2025 — AMIK Taruna & Contributors
+## 📸 Tampilan
+Tambahkan screenshot pada folder screenshots/ dan tampilkan seperti berikut:
 
-🤝 Kontribusi
-Pull request terbuka! Silakan fork dan buat branch baru untuk perbaikan, refactor, atau fitur tambahan.
+yaml
+Copy
+Edit
+📊 Dashboard Role Kabag:
+![Dashboard Kabag](screenshots/dashboard-kabag.png)
 
-📸 Screenshot
+📥 Form Pengajuan:
+![Form Pengajuan](screenshots/form-pengajuan.png)
+## 📄 Lisensi
+MIT License © 2025 - AMIK Taruna & Contributors
 
 
 
