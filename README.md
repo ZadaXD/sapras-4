@@ -1,6 +1,6 @@
 # 📦 Sistem Informasi SAPRAS AMIK Taruna
 
-Sistem informasi ini digunakan untuk **pengawasan**, **pengendalian**, dan **pengalihan** SAPRAS (Sarana dan Prasarana) oleh berbagai role di lingkungan AMIK Taruna. Dibangun dengan Laravel 10 dan menggunakan template dashboard **STISLA**.
+Sistem informasi ini digunakan untuk **pengawasan**, **pengendalian**, dan **pengalihan** SAPRAS (Sarana dan Prasarana) oleh berbagai role di lingkungan AMIK Taruna. Dibangun dengan Laravel 10 dan menggunakan template dashboard **AdminLTE3**.
 
 ---
 
@@ -15,7 +15,7 @@ Sistem informasi ini digunakan untuk **pengawasan**, **pengendalian**, dan **pen
 - Informasi umum SAPRAS
 - Dashboard dinamis sesuai **role**
 - Login & autentikasi Laravel bawaan
-- Responsive layout dengan STISLA + Bootstrap 4
+- Responsive layout dengan AdminLTE3 + Bootstrap 4
 - Tabel interaktif dengan **DataTables**
 
 ---
