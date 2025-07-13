@@ -31,7 +31,7 @@ Sistem informasi ini digunakan untuk **pengawasan**, **pengendalian**, dan **pen
 
 ## 👥 Role & Hak Akses
 
-| Role                  | Akses                                                                 |
+| Role                  | Akses                                                                |
 |-----------------------|----------------------------------------------------------------------|
 | Calon Pengguna        | Pengajuan mutasi, cetak formulir, lihat SAPRAS & pengawasan          |
 | Wadir II              | Verifikasi pengajuan (Setujui/Tolak)                                 |
@@ -72,16 +72,15 @@ php artisan migrate --seed
 php artisan serve
 ```
 ## 🧪 Login Dummy (Seeder)
-Role	Email	Password
-Kabag	kabag@amik.test	password
-Wadir II	wadir@amik.test	password
-Calon Pengguna	calon@amik.test	password
-Penanggung Jawab Lab	pjlab@amik.test	password
+| Role	                | Email	             | Password |
+|-----------------------|--------------------|----------|
+| Kabag	                | kabag@amik.test	 | password |
+| Wadir II	            | wadir@amik.test	 | password |
+| Calon Pengguna	    | calon@amik.test	 | password |
+| Penanggung Jawab Lab  |	pjlab@amik.test  | password |
 
 ## 📁 Struktur Direktori
-bash
-Copy
-Edit
+
 app/
 ├── Http/Controllers/
 │   ├── SaprasController.php
@@ -96,19 +95,25 @@ resources/views/
 └── layouts/
 routes/
 └── web.php
-## 📸 Tampilan
-Tambahkan screenshot pada folder screenshots/ dan tampilkan seperti berikut:
 
-yaml
-Copy
-Edit
+## 📸 Tampilan : 
+
+📊 Dashboard Role Login:
+<img width="1851" height="902" alt="image" src="https://github.com/user-attachments/assets/275d4a5e-510e-4df0-aad7-df4650a1996c" />
+
+
+📊 Dashboard Role Calon Pengguna / Dosen:
+<img width="1851" height="912" alt="image" src="https://github.com/user-attachments/assets/85384743-ff66-4f08-9f7f-ec6e209b41cd" />
+
+📊 Dashboard Role Wadir II:
+<img width="1850" height="917" alt="image" src="https://github.com/user-attachments/assets/9ff360be-42b1-4873-a220-5d21f7244e7d" />
+
 📊 Dashboard Role Kabag:
-![Dashboard Kabag](screenshots/dashboard-kabag.png)
+<img width="1851" height="916" alt="image" src="https://github.com/user-attachments/assets/fbfecc73-67d2-49d4-94f2-44b472fbdd5a" />
 
-📥 Form Pengajuan:
-![Form Pengajuan](screenshots/form-pengajuan.png)
+📊 Dashboard Role Penanggung Jawab Lab:
+<img width="1850" height="915" alt="image" src="https://github.com/user-attachments/assets/3f910b74-0a87-483b-9b11-7955e9928330" />
+
+
 ## 📄 Lisensi
 MIT License © 2025 - AMIK Taruna & Contributors
-
-
-
