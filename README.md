@@ -68,7 +68,7 @@ php artisan serve
 | Kabag	                | kabag@amiktaruna.ac.id	 | password |
 | Wadir II	            | wadir@amiktaruna.ac.id	 | password |
 | Calon Pengguna	    | calon@amiktaruna.ac.id	 | password |
-| Penanggung Jawab Lab  | pjlab@amiktaruna.ac.id     | password |
+| Penanggung Jawab Lab  | lab@amiktaruna.ac.id       | password |
 
 
 ## 📸 Tampilan : 
