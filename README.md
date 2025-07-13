@@ -7,60 +7,102 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+📦 Sistem Informasi SAPRAS AMIK Taruna
+Sistem berbasis web untuk mendukung proses pengawasan, pengendalian, dan pengalihan barang sarana dan prasarana (SAPRAS) di AMIK Taruna. Dibangun menggunakan Laravel 10 dan template dashboard STISLA.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+🎯 Fitur Utama
+🔐 Login Multi-role (Calon Pengguna, Kabag, Wadir II, PJ Lab)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+📊 Dashboard Role-Based (statistik & akses khusus)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+🗂️ Master Data SAPRAS (CRUD oleh Kabag)
 
-## Learning Laravel
+📨 Pengajuan Mutasi oleh Calon Pengguna
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+✅ Verifikasi Pengajuan oleh Wadir II
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+🖨️ Cetak Formulir & Berita Acara
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+📍 Pengawasan SAPRAS per Lokasi (LabKom1–4) oleh PJ Lab & Calon Pengguna (read-only)
 
-## Laravel Sponsors
+🛠️ Update Kondisi Barang oleh PJ Lab (Baik / Rusak / Diperbaiki)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+👥 Role & Hak Akses
+Role	Akses
+Calon Pengguna	Buat & cetak pengajuan, lihat SAPRAS dan pengawasan
+Wadir II	Verifikasi pengajuan (disetujui / ditolak)
+Kabag	Kelola user, data SAPRAS, dan buat berita acara
+Penanggung Jawab Lab	Cek SAPRAS per LabKom & update kondisi
 
-### Premium Partners
+🚀 Teknologi
+Laravel 10.x
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Template AdminLTE3
 
-## Contributing
+Bootstrap 4
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+jQuery, DataTables
 
-## Code of Conduct
+Blade Templating
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+MySQL/MariaDB
 
-## Security Vulnerabilities
+⚙️ Instalasi
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/sapras-amik.git
+cd sapras-amik
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Install dependensi
+composer install
+npm install && npm run dev
 
-## License
+# Copy file env & generate key
+cp .env.example .env
+php artisan key:generate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Atur koneksi DB lalu migrasi & seed
+php artisan migrate --seed
+
+# Jalankan server lokal
+php artisan serve
+🧪 Login Dummy (Seeder)
+Role	Email	Password
+Kabag	kabag@amik.test	password
+Wadir II	wadir@amik.test	password
+Calon Pengguna	calon@amik.test	password
+Penanggung Jawab Lab	pjlab@amik.test	password
+
+📁 Struktur Fitur
+Copy
+Edit
+app/
+├── Http/
+│   ├── Controllers/
+│   │   ├── PengajuanController.php
+│   │   ├── VerifikasiController.php
+│   │   ├── SaprasController.php
+│   │   └── ...
+├── Models/
+│   ├── Pengajuan.php
+│   ├── Sapras.php
+│   └── User.php
+resources/
+├── views/
+│   ├── dashboard/
+│   ├── pengajuan/
+│   ├── sapras/
+│   └── ...
+routes/
+└── web.php
+📃 Lisensi
+MIT License © 2025 — AMIK Taruna & Contributors
+
+🤝 Kontribusi
+Pull request terbuka! Silakan fork dan buat branch baru untuk perbaikan, refactor, atau fitur tambahan.
+
+📸 Screenshot
+
+
+
