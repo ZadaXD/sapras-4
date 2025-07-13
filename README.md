@@ -43,7 +43,7 @@ Sistem informasi ini digunakan untuk **pengawasan**, **pengendalian**, dan **pen
 ## ⚙️ Teknologi
 
 - Laravel 10.x
-- STISLA Admin Template
+- AdminLTE3
 - Bootstrap 4.6
 - Font Awesome 5
 - jQuery & DataTables
@@ -72,35 +72,18 @@ php artisan migrate --seed
 php artisan serve
 ```
 ## 🧪 Login Dummy (Seeder)
-| Role	                | Email	             | Password |
-|-----------------------|--------------------|----------|
-| Kabag	                | kabag@amik.test	 | password |
-| Wadir II	            | wadir@amik.test	 | password |
-| Calon Pengguna	    | calon@amik.test	 | password |
-| Penanggung Jawab Lab  |	pjlab@amik.test  | password |
+| Role	                | Email	                     | Password |
+|-----------------------|----------------------------|----------|
+| Kabag	                | kabag@amiktaruna.ac.id	 | password |
+| Wadir II	            | wadir@amiktaruna.ac.id	 | password |
+| Calon Pengguna	    | calon@amiktaruna.ac.id	 | password |
+| Penanggung Jawab Lab  | pjlab@amiktaruna.ac.id     | password |
 
-## 📁 Struktur Direktori
-
-app/
-├── Http/Controllers/
-│   ├── SaprasController.php
-│   ├── PengajuanController.php
-│   ├── VerifikasiController.php
-│   ├── DashboardController.php
-│   └── ...
-resources/views/
-├── sapras/
-├── pengajuan/
-├── users/
-└── layouts/
-routes/
-└── web.php
 
 ## 📸 Tampilan : 
 
 📊 Dashboard Role Login:
 <img width="1851" height="902" alt="image" src="https://github.com/user-attachments/assets/275d4a5e-510e-4df0-aad7-df4650a1996c" />
-
 
 📊 Dashboard Role Calon Pengguna / Dosen:
 <img width="1851" height="912" alt="image" src="https://github.com/user-attachments/assets/85384743-ff66-4f08-9f7f-ec6e209b41cd" />
